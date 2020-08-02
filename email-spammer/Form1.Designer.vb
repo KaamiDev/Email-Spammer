@@ -36,7 +36,6 @@ Partial Class Form1
         Me.txtEmailToSpam = New System.Windows.Forms.TextBox()
         Me.Label7 = New System.Windows.Forms.Label()
         Me.Label8 = New System.Windows.Forms.Label()
-        Me.Label6 = New System.Windows.Forms.Label()
         Me.Label9 = New System.Windows.Forms.Label()
         Me.Label10 = New System.Windows.Forms.Label()
         Me.btnSpam = New System.Windows.Forms.Button()
@@ -44,6 +43,9 @@ Partial Class Form1
         Me.ProgressBar1 = New System.Windows.Forms.ProgressBar()
         Me.lblProgressBar = New System.Windows.Forms.Label()
         Me.PictureBox1 = New System.Windows.Forms.PictureBox()
+        Me.Label6 = New System.Windows.Forms.Label()
+        Me.txtEmailSubject = New System.Windows.Forms.TextBox()
+        Me.Label11 = New System.Windows.Forms.Label()
         CType(Me.txtNumOfEmails, System.ComponentModel.ISupportInitialize).BeginInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).BeginInit()
         Me.SuspendLayout()
@@ -54,9 +56,9 @@ Partial Class Form1
         Me.Label1.Font = New System.Drawing.Font("Microsoft Sans Serif", 16.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label1.Location = New System.Drawing.Point(110, 37)
         Me.Label1.Name = "Label1"
-        Me.Label1.Size = New System.Drawing.Size(324, 37)
+        Me.Label1.Size = New System.Drawing.Size(393, 37)
         Me.Label1.TabIndex = 0
-        Me.Label1.Text = "Easy Email Spammer"
+        Me.Label1.Text = "Easy Email Spammer v2.0"
         '
         'Label2
         '
@@ -86,7 +88,7 @@ Partial Class Form1
         Me.Label3.Location = New System.Drawing.Point(455, 197)
         Me.Label3.Name = "Label3"
         Me.Label3.Size = New System.Drawing.Size(132, 20)
-        Me.Label3.TabIndex = 3
+        Me.Label3.TabIndex = 13
         Me.Label3.Text = "Gmail Username:"
         '
         'Label4
@@ -95,7 +97,7 @@ Partial Class Form1
         Me.Label4.Location = New System.Drawing.Point(456, 232)
         Me.Label4.Name = "Label4"
         Me.Label4.Size = New System.Drawing.Size(127, 20)
-        Me.Label4.TabIndex = 4
+        Me.Label4.TabIndex = 15
         Me.Label4.Text = "Gmail Password:"
         '
         'txtGmailUsername
@@ -103,7 +105,7 @@ Partial Class Form1
         Me.txtGmailUsername.Location = New System.Drawing.Point(595, 195)
         Me.txtGmailUsername.Name = "txtGmailUsername"
         Me.txtGmailUsername.Size = New System.Drawing.Size(217, 26)
-        Me.txtGmailUsername.TabIndex = 5
+        Me.txtGmailUsername.TabIndex = 14
         '
         'txtGmailPassword
         '
@@ -111,48 +113,48 @@ Partial Class Form1
         Me.txtGmailPassword.Name = "txtGmailPassword"
         Me.txtGmailPassword.PasswordChar = Global.Microsoft.VisualBasic.ChrW(8226)
         Me.txtGmailPassword.Size = New System.Drawing.Size(217, 26)
-        Me.txtGmailPassword.TabIndex = 6
+        Me.txtGmailPassword.TabIndex = 16
         '
         'txtNumOfEmails
         '
-        Me.txtNumOfEmails.Location = New System.Drawing.Point(174, 317)
+        Me.txtNumOfEmails.Location = New System.Drawing.Point(173, 351)
         Me.txtNumOfEmails.Minimum = New Decimal(New Integer() {1, 0, 0, 0})
         Me.txtNumOfEmails.Name = "txtNumOfEmails"
         Me.txtNumOfEmails.Size = New System.Drawing.Size(120, 26)
-        Me.txtNumOfEmails.TabIndex = 7
+        Me.txtNumOfEmails.TabIndex = 11
         Me.txtNumOfEmails.Value = New Decimal(New Integer() {1, 0, 0, 0})
         '
         'Label5
         '
         Me.Label5.AutoSize = True
-        Me.Label5.Location = New System.Drawing.Point(35, 319)
+        Me.Label5.Location = New System.Drawing.Point(34, 353)
         Me.Label5.Name = "Label5"
         Me.Label5.Size = New System.Drawing.Size(91, 20)
-        Me.Label5.TabIndex = 8
+        Me.Label5.TabIndex = 10
         Me.Label5.Text = "# of Emails:"
         '
         'txtEmailBody
         '
-        Me.txtEmailBody.Location = New System.Drawing.Point(174, 232)
+        Me.txtEmailBody.Location = New System.Drawing.Point(173, 266)
         Me.txtEmailBody.Multiline = True
         Me.txtEmailBody.Name = "txtEmailBody"
         Me.txtEmailBody.Size = New System.Drawing.Size(217, 72)
-        Me.txtEmailBody.TabIndex = 14
+        Me.txtEmailBody.TabIndex = 9
         '
         'txtEmailToSpam
         '
         Me.txtEmailToSpam.Location = New System.Drawing.Point(174, 197)
         Me.txtEmailToSpam.Name = "txtEmailToSpam"
         Me.txtEmailToSpam.Size = New System.Drawing.Size(217, 26)
-        Me.txtEmailToSpam.TabIndex = 13
+        Me.txtEmailToSpam.TabIndex = 5
         '
         'Label7
         '
         Me.Label7.AutoSize = True
-        Me.Label7.Location = New System.Drawing.Point(35, 234)
+        Me.Label7.Location = New System.Drawing.Point(34, 268)
         Me.Label7.Name = "Label7"
         Me.Label7.Size = New System.Drawing.Size(92, 20)
-        Me.Label7.TabIndex = 12
+        Me.Label7.TabIndex = 8
         Me.Label7.Text = "Email Body:"
         '
         'Label8
@@ -161,18 +163,8 @@ Partial Class Form1
         Me.Label8.Location = New System.Drawing.Point(34, 199)
         Me.Label8.Name = "Label8"
         Me.Label8.Size = New System.Drawing.Size(116, 20)
-        Me.Label8.TabIndex = 11
+        Me.Label8.TabIndex = 4
         Me.Label8.Text = "Email to Spam:"
-        '
-        'Label6
-        '
-        Me.Label6.AutoSize = True
-        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
-        Me.Label6.Location = New System.Drawing.Point(33, 155)
-        Me.Label6.Name = "Label6"
-        Me.Label6.Size = New System.Drawing.Size(150, 20)
-        Me.Label6.TabIndex = 15
-        Me.Label6.Text = "Email Information"
         '
         'Label9
         '
@@ -181,7 +173,7 @@ Partial Class Form1
         Me.Label9.Location = New System.Drawing.Point(455, 155)
         Me.Label9.Name = "Label9"
         Me.Label9.Size = New System.Drawing.Size(164, 20)
-        Me.Label9.TabIndex = 16
+        Me.Label9.TabIndex = 12
         Me.Label9.Text = "Sender Information"
         '
         'Label10
@@ -215,19 +207,19 @@ Partial Class Form1
         '
         'ProgressBar1
         '
-        Me.ProgressBar1.Location = New System.Drawing.Point(25, 416)
+        Me.ProgressBar1.Location = New System.Drawing.Point(23, 437)
         Me.ProgressBar1.Name = "ProgressBar1"
         Me.ProgressBar1.Size = New System.Drawing.Size(811, 40)
-        Me.ProgressBar1.TabIndex = 20
+        Me.ProgressBar1.TabIndex = 21
         '
         'lblProgressBar
         '
         Me.lblProgressBar.AutoSize = True
         Me.lblProgressBar.BackColor = System.Drawing.Color.Transparent
-        Me.lblProgressBar.Location = New System.Drawing.Point(21, 393)
+        Me.lblProgressBar.Location = New System.Drawing.Point(19, 414)
         Me.lblProgressBar.Name = "lblProgressBar"
         Me.lblProgressBar.Size = New System.Drawing.Size(125, 20)
-        Me.lblProgressBar.TabIndex = 21
+        Me.lblProgressBar.TabIndex = 20
         Me.lblProgressBar.Text = "Status: Stopped"
         '
         'PictureBox1
@@ -240,11 +232,39 @@ Partial Class Form1
         Me.PictureBox1.TabIndex = 22
         Me.PictureBox1.TabStop = False
         '
+        'Label6
+        '
+        Me.Label6.AutoSize = True
+        Me.Label6.Font = New System.Drawing.Font("Microsoft Sans Serif", 8.0!, CType((System.Drawing.FontStyle.Bold Or System.Drawing.FontStyle.Underline), System.Drawing.FontStyle), System.Drawing.GraphicsUnit.Point, CType(0, Byte))
+        Me.Label6.Location = New System.Drawing.Point(33, 155)
+        Me.Label6.Name = "Label6"
+        Me.Label6.Size = New System.Drawing.Size(150, 20)
+        Me.Label6.TabIndex = 3
+        Me.Label6.Text = "Email Information"
+        '
+        'txtEmailSubject
+        '
+        Me.txtEmailSubject.Location = New System.Drawing.Point(174, 230)
+        Me.txtEmailSubject.Name = "txtEmailSubject"
+        Me.txtEmailSubject.Size = New System.Drawing.Size(217, 26)
+        Me.txtEmailSubject.TabIndex = 7
+        '
+        'Label11
+        '
+        Me.Label11.AutoSize = True
+        Me.Label11.Location = New System.Drawing.Point(34, 232)
+        Me.Label11.Name = "Label11"
+        Me.Label11.Size = New System.Drawing.Size(110, 20)
+        Me.Label11.TabIndex = 6
+        Me.Label11.Text = "Email Subject:"
+        '
         'Form1
         '
         Me.AutoScaleDimensions = New System.Drawing.SizeF(9.0!, 20.0!)
         Me.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font
-        Me.ClientSize = New System.Drawing.Size(862, 470)
+        Me.ClientSize = New System.Drawing.Size(862, 500)
+        Me.Controls.Add(Me.txtEmailSubject)
+        Me.Controls.Add(Me.Label11)
         Me.Controls.Add(Me.PictureBox1)
         Me.Controls.Add(Me.lblProgressBar)
         Me.Controls.Add(Me.ProgressBar1)
@@ -266,12 +286,11 @@ Partial Class Form1
         Me.Controls.Add(Me.lblCreditsLink)
         Me.Controls.Add(Me.Label2)
         Me.Controls.Add(Me.Label1)
+        Me.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle
         Me.Icon = CType(resources.GetObject("$this.Icon"), System.Drawing.Icon)
-        Me.MaximumSize = New System.Drawing.Size(884, 526)
-        Me.MinimumSize = New System.Drawing.Size(884, 526)
         Me.Name = "Form1"
         Me.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen
-        Me.Text = "Easy Email Spammer by KaamiDev"
+        Me.Text = "Easy Email Spammer v2.0 by KaamiDev"
         CType(Me.txtNumOfEmails, System.ComponentModel.ISupportInitialize).EndInit()
         CType(Me.PictureBox1, System.ComponentModel.ISupportInitialize).EndInit()
         Me.ResumeLayout(False)
@@ -292,7 +311,6 @@ Partial Class Form1
     Friend WithEvents txtEmailToSpam As TextBox
     Friend WithEvents Label7 As Label
     Friend WithEvents Label8 As Label
-    Friend WithEvents Label6 As Label
     Friend WithEvents Label9 As Label
     Friend WithEvents Label10 As Label
     Friend WithEvents btnSpam As Button
@@ -300,4 +318,7 @@ Partial Class Form1
     Friend WithEvents ProgressBar1 As ProgressBar
     Friend WithEvents lblProgressBar As Label
     Friend WithEvents PictureBox1 As PictureBox
+    Friend WithEvents Label6 As Label
+    Friend WithEvents txtEmailSubject As TextBox
+    Friend WithEvents Label11 As Label
 End Class
